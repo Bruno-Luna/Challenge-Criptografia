@@ -1,0 +1,33 @@
+header, label{
+    text-align: center;
+}
+
+hr, .card-left, .card-right{
+    box-shadow: 1px 2px 1px;
+}
+
+.container-cards{
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cards .card-left span{
+    font-size: .6rem;
+    position: relative;
+    bottom: 12px;
+    color: red;
+}
+
+.container-cards .card-left, .container-cards .card-right{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
