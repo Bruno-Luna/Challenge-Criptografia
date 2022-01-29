@@ -41,7 +41,6 @@ textarea{
     width: 30vw;
     resize: none;
     font-weight: bold;
-    font-size: 1rem;  
 }
 
 .btn{
@@ -93,3 +92,21 @@ textarea{
     animation: fadeIn ease-in-out 1s;
   }
   
+  @media only screen and (max-width:768px){
+  
+    hr{
+      margin-bottom: 1rem;
+    }
+    .show{
+      display: none;
+    }  
+    .popup, textarea{
+      width: 100%;
+      font-size: .6rem;
+    }  
+    .btn, .container-cards{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;   
+    }
+  }
