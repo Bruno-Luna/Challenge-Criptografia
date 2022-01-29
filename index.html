@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css/style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js"></script>
     <title>Criptografia</title>
 </head>
 <body>
@@ -16,14 +17,20 @@
         <div class="container-cards">
             <div class="card-left">
                 <label>Digite uma palavra:</label>
-                <input type="text" placeholder="Insira seu texto aqui para fazer a criptografia">
-                <span>* Letras minúsculas e sem acentos</span>
-                <button>Criptografar</button>
-                <button>Descriptograr</button>
+                <textarea id="textoEsquerdo" cols="30" rows="3" autofocus></textarea>
+                <span class="obs">* Letras minúsculas e sem acentos</span>
+                <div class="btn">
+                    <div class="popup" onclick="criptografia()">Criptografar
+                        <span class="popuptext" id="popUp">Por favor, insira um texto!</span>
+                    </div>
+                    <div class="popup"  onclick="descriptografia()">Descriptografar
+                        <span class="popuptext" id="popUp">Por favor, insira um texto!</span>
+                    </div>
+                </div>
             </div>
             <div class="card-right">
-                <input type="text">
-                <button>Copiar texto</button>
+                <textarea id="textoDireito" cols="30" rows="3"></textarea>
+                <button onclick="copiar()">Copiar texto</button>
             </div>
         </div>
     </main>
