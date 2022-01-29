@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="js/script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script defer src="js/script.js"></script>
     <title>Criptografia</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h2>Criptografia de palavras</h2>
-        <hr>
+      <h2>Criptografia de palavras</h2>
+      <hr />
     </header>
     <main>
-        <div class="container-cards">
-            <div class="card-left">
-                <label>Digite uma palavra:</label>
-                <textarea id="textoEsquerdo" cols="30" rows="3" autofocus placeholder="Digite aqui sua mensagem..."></textarea>
-                <span class="obs">* Letras minúsculas e sem acentos</span>
-                <div class="btn">
-                    <div class="popup" onclick="criptografia()">Criptografar
-                        <span class="popuptext" id="popUp">Por favor, insira um texto!</span>
-                    </div>
-                    <div class="popup"  onclick="descriptografia()">Descriptografar
-                        <span class="popuptext" id="popUp">Por favor, insira um texto!</span>
-                    </div>
-                </div>
+      <div class="container-cards">
+        <div class="card-left">
+          <label>Digite uma palavra:</label>
+          <textarea
+            id="textoEsquerdo"
+            cols="30"
+            rows="3"
+            autofocus
+            placeholder="Digite aqui sua mensagem..."></textarea>
+          <span class="obs">* Letras minúsculas e sem acentos</span>
+          <div class="btn">
+            <div class="popup" onclick="criptografia()">
+              Criptografar
+              <span class="popuptext" id="popUp"
+                >Por favor, insira um texto!</span>
             </div>
-            <div class="card-right">
-                <textarea id="textoDireito" cols="30" rows="3"></textarea>
-                <div class="popup" onclick="copiar()">Copiar texto</div>
+            <div class="popup" onclick="descriptografia()">
+              Descriptografar
+              <span class="popuptext" id="popUp"
+                >Por favor, insira um texto!</span>
             </div>
+          </div>
         </div>
+        <div class="card-right">
+          <textarea id="textoDireito" cols="30" rows="3"></textarea>
+          <div class="popup" onclick="copiar()">Copiar texto</div>
+        </div>
+      </div>
     </main>
-
-</body>
+  </body>
 </html>

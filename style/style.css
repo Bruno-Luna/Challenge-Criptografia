@@ -57,6 +57,7 @@ textarea{
     border:  1px solid black;
     text-align: center;  
     padding: .44rem;
+    animation-duration: 100ms;
   }
   
   .popup .popuptext {
@@ -88,8 +89,8 @@ textarea{
   
   .popup .show {
     visibility: visible;
-    -webkit-animation: fadeIn .2s;
-    animation: fadeIn .2s
+    -webkit-animation: fadeIn ease-in-out 150ms;
+    animation: fadeIn ease-in-out 150ms;
   }
   
   @-webkit-keyframes fadeIn {

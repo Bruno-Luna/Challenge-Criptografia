@@ -3,8 +3,7 @@
 // A letra "i" é convertida para "imes"
 // A letra "a" é convertida para "ai"
 // A letra "o" é convertida para "ober"
-// A letra "u" é convertida para "ufat"
-
+// // A letra "u" é convertida para "ufat"
 
 function criptografia() {
   var caixaDeTextoEsquerdo = document.getElementById("textoEsquerdo").value;
@@ -13,13 +12,14 @@ function criptografia() {
   if (caixaDeTextoEsquerdo.trim() === "") {
     var popup = document.getElementById("popUp");
     popup.classList.toggle("show");
-  }  else{
-    var textoCriptografado = caixaDeTextoEsquerdo
-      .replaceAll(/e/gi, "enter")
-      .replace(/i/gi, "imes")
-      .replace(/u/gi, "ufat")
-      .replace(/a/gi, "ai")
-      .replace(/o/gi, "ober");
+  } else {
+    var textoCriptografado = caixaDeTextoEsquerdo.toLowerCase()
+      .replace(/[^a-z ]/g, "")
+      .replaceAll(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/u/g, "ufat")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober");
 
     caixaDeTextoDireito.textContent = textoCriptografado;
   }
@@ -33,23 +33,24 @@ function descriptografia() {
     var popup = document.getElementById("popUp");
     popup.classList.toggle("show");
   } else {
-    var textoDescriptografado = caixaDeTextoEsquerdo
-      .replaceAll(/enter/gi, "e")
-      .replace(/imes/gi, "i")
-      .replace(/ufat/gi, "u")
-      .replace(/ai/gi, "a")
-      .replace(/ober/gi, "o");
+    var textoDescriptografado = caixaDeTextoEsquerdo.toLowerCase()
+      .replace(/[^a-z ]/g, "")
+      .replaceAll(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ufat/g, "u")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o");
 
     caixaDeTextoDireito.textContent = textoDescriptografado;
-    }
+  }
 }
 
 function copiar() {
-  var caixaDeTexto = document.getElementById("textoDireito");
+  var caixaTextoDireito = document.getElementById("textoDireito");
 
-  caixaDeTexto.select(); //seleciona o texto
-  caixaDeTexto.setSelectionRange(0, 99999); //copia em dispositivos moveis
-  document.execCommand("copy"); //executa o comando copiar texto
+  caixaTextoDireito.select(); //seleciona o texto
+  caixaTextoDireito.setSelectionRange(0, 99999); //copia em dispositivos moveis
+  navigator.clipboard.writeText(caixaTextoDireito.value);
 
   window.location.reload();
 }
