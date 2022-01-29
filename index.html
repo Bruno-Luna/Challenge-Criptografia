@@ -17,7 +17,7 @@
         <div class="container-cards">
             <div class="card-left">
                 <label>Digite uma palavra:</label>
-                <textarea id="textoEsquerdo" cols="30" rows="3" autofocus></textarea>
+                <textarea id="textoEsquerdo" cols="30" rows="3" autofocus placeholder="Digite aqui sua mensagem..."></textarea>
                 <span class="obs">* Letras minúsculas e sem acentos</span>
                 <div class="btn">
                     <div class="popup" onclick="criptografia()">Criptografar
@@ -30,7 +30,7 @@
             </div>
             <div class="card-right">
                 <textarea id="textoDireito" cols="30" rows="3"></textarea>
-                <button onclick="copiar()">Copiar texto</button>
+                <div class="popup" onclick="copiar()">Copiar texto</div>
             </div>
         </div>
     </main>
