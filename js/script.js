@@ -5,6 +5,13 @@
 // A letra "o" é convertida para "ober"
 // // A letra "u" é convertida para "ufat"
 
+function nome(){
+    var nome = window.prompt('Qual seu nome?');
+    var label = document.querySelector('label');
+    label.textContent = 'Digite uma palavra, ' +  nome + ':';
+}
+
+
 function criptografia() {
   var caixaDeTextoEsquerdo = document.getElementById("textoEsquerdo").value;
   var caixaDeTextoDireito = document.getElementById("textoDireito");
@@ -54,3 +61,14 @@ function copiar() {
 
   window.location.reload();
 }
+
+function mostrarHora(){
+    var mostrarData = document.querySelector("hr");
+    var data = new Date;
+    mostrarData.textContent = 'Hora do acesso: ' + data.getHours() + ':' + data.getMinutes();
+    mostrarData.style.fontSize = '.8rem';
+    
+}
+
+nome()
+mostrarHora()

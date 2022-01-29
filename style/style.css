@@ -8,8 +8,8 @@ header{
     text-align: center;
 }
 
-hr, .card-left, .card-right{
-    box-shadow: 1px 2px 1px;
+hr, .card-left, .card-right, textarea, .popup{
+    box-shadow: 2px 1px 6px;
 }
 
 .container-cards{
@@ -40,14 +40,14 @@ hr, .card-left, .card-right{
 textarea{
     width: 30vw;
     resize: none;
+    font-weight: bold;
+    font-size: 1rem;  
 }
 
 .btn{
     display: flex;
     justify-content: space-around;
 }
-
-
 /* POPUPS */
 
 .popup {
@@ -89,16 +89,7 @@ textarea{
   
   .popup .show {
     visibility: visible;
-    -webkit-animation: fadeIn ease-in-out 150ms;
-    animation: fadeIn ease-in-out 150ms;
+    -webkit-animation: fadeIn ease-in-out 1s;
+    animation: fadeIn ease-in-out 1s;
   }
   
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
