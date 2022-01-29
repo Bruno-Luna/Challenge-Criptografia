@@ -1,0 +1,101 @@
+header{
+    text-align: center;
+}
+
+hr, .card-left, .card-right{
+    box-shadow: 1px 2px 1px;
+}
+
+.container-cards{
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cards .card-left .obs{
+    font-size: .6rem;
+    position: relative;
+    bottom: 12px;
+    color: red;
+}
+
+.container-cards .card-left, .container-cards .card-right{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+textarea{
+    width: 30vw;
+    resize: none;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* POPUPS */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border:  1px solid black;
+    text-align: center;  
+    padding: .44rem;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 425%;
+    left: 280%;
+    margin-left: -80px;
+    font-size: .8rem;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn .2s;
+    animation: fadeIn .2s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
